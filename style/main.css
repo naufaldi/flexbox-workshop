@@ -1,6 +1,6 @@
 /* CSS Reset */
 
-html {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -18,6 +18,12 @@ a {
 }
 .flex-col {
   flex-direction: column;
+}
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
 }
 .justify-center {
   justify-content: center;
@@ -43,15 +49,67 @@ a {
 .w-auto {
   width: auto;
 }
-.w-full {
+.col-12 {
   width: 100%;
 }
-.w-half {
+.col-11 {
+  width: 91.666667%;
+}
+.col-10 {
+  width: 83.333333%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-8 {
+  width: 66.666667%;
+}
+.col-7 {
+  width: 58.333333%;
+}
+.col-6 {
   width: 50%;
+}
+.col-5 {
+  width: 41.666667%;
+}
+.col-4 {
+  width: 33.333333%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-2 {
+  width: 16.666667%;
+}
+.col-1 {
+  width: 8.333333%;
 }
 .relative {
   position: relative;
 }
 .absolute {
   position: absolute;
+}
+
+.black {
+  background-color: black;
+}
+.blue {
+  background-color: aqua;
+}
+.green {
+  background-color: greenyellow;
+}
+.yellow {
+  background-color: yellow;
+}
+.pink {
+  background-color: pink;
+}
+.purple {
+  background-color: blueviolet;
+}
+.box {
+  border: 1px solid black;
 }

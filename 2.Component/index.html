@@ -5,75 +5,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../style/main.css" />
+    <style>
+      .container {
+        min-height: 10rem;
+        padding: 3rem;
+      }
+      .card-acc {
+        padding: 1rem;
+      }
+      .card-acc__img {
+        height: 5rem;
+        margin-right: 1rem;
+      }
+      button {
+        background: greenyellow;
+        padding: 1rem;
+      }
+      .dropdown-list {
+        background-color: aqua;
+        padding: 1rem;
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
     <!-- Center things -->
-    <div class="container w-full" style="padding: 2rem">
-      <div class="items">Centering Saya</div>
+    <div class="container col-12 box justify-center flex" style="padding: 2rem">
+      <div class="items box">Centering Saya</div>
     </div>
+    <br />
     <!-- Jarak Antar Component -->
-    <div class="container w-full" style="padding: 2rem">
-      <div class="items">1</div>
-      <div class="items">2</div>
-      <div class="items">3</div>
+    <div class="container col-12 flex justify-evenly box" style="padding: 2rem">
+      <div
+        class="items box flex justify-center"
+        style="height: 4rem; width: 4rem"
+      >
+        1
+      </div>
+      <div
+        class="items box flex justify-start"
+        style="height: 4rem; width: 4rem"
+      >
+        2
+      </div>
+      <div class="items box flex justify-end" style="height: 4rem; width: 4rem">
+        3
+      </div>
     </div>
     <!-- Acc simple -->
-    <div class="container">
-      <div class="card">
-        <div>
-          <img src="https://randomuser.me/api/portraits/women/75.jpg" alt="" />
-        </div>
-        <div class="">
+    <br />
+    <div class="container box flex" style="padding: 3rem">
+      <div class="card-acc box flex">
+        <img
+          src="https://randomuser.me/api/portraits/women/75.jpg"
+          class="card-acc__img"
+          alt=""
+        />
+        <div class="flex flex-col justify-evenly">
           <p>Naufaldi</p>
           <p>Subtitle</p>
         </div>
       </div>
     </div>
+    <br />
     <!-- Button -->
-    <button>
-      <svg
-        class="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"
-        ></path>
-      </svg>
-      <p>Button with Icon</p>
-    </button>
-    <!-- Input -->
-    <label class="">
-      <span class="">Name</span>
-      <input class="" placeholder="Jane Doe" />
-    </label>
-    <!-- Input with icons -->
-    <div class="">
-      <input type="search" class="" placeholder="Search by name..." />
+    <div class="container box flex items-start">
+      <button class="flex items-center">
+        <span class="flex" style="height: 2rem; width: 2rem">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"
+            ></path>
+          </svg>
+        </span>
+        Button with Icon
+      </button>
+      <!-- Button dropdown -->
+      <div class="relative" style="margin-left: 1rem">
+        <button class="flex items-center">
+          <span class="flex" style="height: 2rem; width: 2rem">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"
+              ></path>
+            </svg>
+          </span>
+          Button dropdown
+        </button>
+        <div class="absolute dropdown-list">
+          <div class="flex flex-col">
+            <a href="">List 1</a>
+            <a href="">List 2</a>
+            <a href="">List 3</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container flex" style="margin-top: 4rem">
+      <!-- Input -->
+      <label class="">
+        <span class="">Name</span>
+        <input class="" placeholder="Jane Doe" />
+      </label>
+
+      <!-- Input with icons -->
       <div class="">
-        <svg
-          version="1.1"
-          class="h-4 text-dark"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          x="0px"
-          y="0px"
-          viewBox="0 0 52.966 52.966"
-          style="enable-background: new 0 0 52.966 52.966"
-          xml:space="preserve"
-        >
-          <path
-            d="M51.704,51.273L36.845,35.82c3.79-3.801,6.138-9.041,6.138-14.82c0-11.58-9.42-21-21-21s-21,9.42-21,21s9.42,21,21,21
+        <input type="search" class="" placeholder="Search by name..." />
+        <div class="">
+          <svg
+            version="1.1"
+            class="h-4 text-dark"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 52.966 52.966"
+            style="enable-background: new 0 0 52.966 52.966"
+            xml:space="preserve"
+          >
+            <path
+              d="M51.704,51.273L36.845,35.82c3.79-3.801,6.138-9.041,6.138-14.82c0-11.58-9.42-21-21-21s-21,9.42-21,21s9.42,21,21,21
             c5.083,0,9.748-1.817,13.384-4.832l14.895,15.491c0.196,0.205,0.458,0.307,0.721,0.307c0.25,0,0.499-0.093,0.693-0.279
             C52.074,52.304,52.086,51.671,51.704,51.273z M21.983,40c-10.477,0-19-8.523-19-19s8.523-19,19-19s19,8.523,19,19
             S32.459,40,21.983,40z"
-          />
-        </svg>
+            />
+          </svg>
+        </div>
       </div>
     </div>
   </body>
