@@ -26,6 +26,9 @@
         padding: 1rem;
         width: 100%;
       }
+      .label-input {
+        width: min-content;
+      }
     </style>
   </head>
   <body>
@@ -119,17 +122,23 @@
         </div>
       </div>
     </div>
-    <div class="container flex" style="margin-top: 4rem">
+    <br />
+    <div class="container flex flex-col" style="margin-top: 4rem">
       <!-- Input -->
-      <label class="">
+      <label class="flex label-input flex-col">
         <span class="">Name</span>
         <input class="" placeholder="Jane Doe" />
       </label>
 
       <!-- Input with icons -->
-      <div class="">
-        <input type="search" class="" placeholder="Search by name..." />
-        <div class="">
+      <label class="relative" style="margin-top: 3rem; width: min-content">
+        <input
+          type="search"
+          class=""
+          placeholder="Search by name..."
+          style="height: 2rem; padding: 1rem"
+        />
+        <div class="absolute" style="height: 2rem; width: 2rem">
           <svg
             version="1.1"
             class="h-4 text-dark"
@@ -149,7 +158,7 @@
             />
           </svg>
         </div>
-      </div>
+      </label>
     </div>
   </body>
 </html>

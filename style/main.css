@@ -43,6 +43,12 @@ a {
 .items-start {
   align-items: flex-start;
 }
+.flex-shrink {
+  flex-shrink: 1;
+}
+.flex-grow {
+  flex-grow: 1;
+}
 .mx-auto {
   margin: 0 auto;
 }
