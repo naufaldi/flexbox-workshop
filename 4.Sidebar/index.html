@@ -5,20 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../style/main.css" />
+    <style>
+      .img-navbar {
+        margin: 2rem;
+      }
+      .menu-item {
+        padding: 1rem 1.5rem;
+      }
+      .menu-item:hover {
+        background-color: antiquewhite;
+      }
+    </style>
   </head>
   <body>
-    <main>
-      <div class="">
-        <nav>
+    <!-- Navbar Dashboard -->
+    <main class="green" style="min-height: 100vh">
+      <div class="fixed yellow">
+        <nav class="flex flex-col" style="min-height: 100vh">
           <img
             src="https://dummyimage.com/100x100/000/fff.png&text=Logo"
             alt=""
+            class="img-navbar"
+            style="height: 2rem; width: 2rem"
           />
-          <div class="">
+          <div class="flex flex-col">
             <ul>
-              <li>
+              <li class="flex menu-item items-center">
                 <svg
                   class="w-6 h-6"
+                  style="margin-right: 0.5rem"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -33,9 +48,10 @@
                 </svg>
                 <p>Dashboard</p>
               </li>
-              <li>
+              <li class="flex menu-item items-center">
                 <svg
                   class="w-6 h-6"
+                  style="margin-right: 0.5rem"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -50,9 +66,10 @@
                 </svg>
                 <p>Notification</p>
               </li>
-              <li>
+              <li class="flex menu-item items-center">
                 <svg
                   class="w-6 h-6"
+                  style="margin-right: 0.5rem"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -67,8 +84,10 @@
                 </svg>
                 <p>Product</p>
               </li>
-              <li>
+              <li class="flex menu-item items-center">
                 <svg
+                  class="w-6 h-6"
+                  style="margin-right: 0.5rem"
                   class="w-6 h-6"
                   fill="none"
                   stroke="currentColor"
@@ -85,11 +104,12 @@
                 <p>Report</p>
               </li>
             </ul>
-            <span>----</span>
+            <span style="margin: 0 auto">----</span>
             <ul>
-              <li>
+              <li class="flex menu-item items-center">
                 <svg
                   class="w-6 h-6"
+                  style="margin-right: 0.5rem"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -110,8 +130,10 @@
                 </svg>
                 <p>Setting</p>
               </li>
-              <li>
+              <li class="flex menu-item items-center">
                 <svg
+                  class="w-6 h-6"
+                  style="margin-right: 0.5rem"
                   class="w-6 h-6"
                   fill="none"
                   stroke="currentColor"
