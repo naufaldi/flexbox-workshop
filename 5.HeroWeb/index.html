@@ -5,12 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../style/main.css" />
+    <style>
+      .caption-header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 5rem;
+        padding-right: 1rem;
+        margin: auto 0;
+      }
+    </style>
   </head>
   <body>
     <!-- Mailchimp header -->
-    <header>
-      <nav>
-        <ul>
+    <header class="flex flex-col">
+      <nav class="flex justify-between items-center">
+        <ul class="flex col-2">
           <li>Product</li>
           <li>Resource</li>
           <li>Inspiration</li>
@@ -20,7 +30,7 @@
           src="https://dummyimage.com/100x100/000/fff.png&text=Logo"
           alt=""
         />
-        <div class="">
+        <div class="col-2">
           <button>
             <svg
               class="w-6 h-6"
@@ -41,16 +51,16 @@
           <button>Sign Up Free</button>
         </div>
       </nav>
-      <div class="">
-        <div class="">
+      <div class="flex" style="margin-top: 2rem">
+        <div class="col-6 caption-header">
           <h2>Marketing smarts for big ideas</h2>
-          <p>
+          <p style="margin: 1rem 0">
             Mailchimp helps small businesses do big things, with the right tools
             and guidance every step of the way.
           </p>
           <button>Pick a Plan</button>
         </div>
-        <div class="">
+        <div class="col-6">
           <img
             src="https://dummyimage.com/300x300/000000/7880fa.png&text=Logo"
             alt=""

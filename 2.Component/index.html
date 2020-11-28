@@ -26,27 +26,41 @@
         padding: 1rem;
         width: 100%;
       }
+      .dropdown-list a:hover {
+        background-color: pink;
+      }
       .label-input {
         width: min-content;
+      }
+      .icon-search {
+        position: absolute;
+        top: 0;
+        /* left: 0; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     </style>
   </head>
   <body>
     <!-- Center things -->
-    <div class="container box" style="padding: 2rem">
+    <div
+      class="container box flex items-center justify-center"
+      style="padding: 2rem"
+    >
       <div class="items box">Centering Saya</div>
     </div>
     <br />
     <!-- Jarak Antar Component -->
-    <div class="container justify-evenly box" style="padding: 2rem">
+    <div class="container flex justify-evenly box" style="padding: 2rem">
       <div class="items box" style="height: 4rem; width: 4rem">1</div>
       <div class="items box" style="height: 4rem; width: 4rem">2</div>
       <div class="items box" style="height: 4rem; width: 4rem">3</div>
     </div>
     <!-- Acc simple -->
     <br />
-    <div class="container box" style="padding: 3rem">
-      <div class="card-acc box">
+    <div class="container box flex" style="padding: 3rem">
+      <div class="card-acc box flex">
         <img
           src="https://randomuser.me/api/portraits/women/75.jpg"
           class="card-acc__img"
@@ -60,11 +74,12 @@
     </div>
     <br />
     <!-- Button -->
-    <div class="container box">
-      <button class="items-center">
+    <div class="container box flex items-start">
+      <button class="items-center flex">
         <span class="" style="height: 2rem; width: 2rem">
           <svg
             class="w-6 h-6"
+            style="width: auto; height: auto"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -78,7 +93,7 @@
             ></path>
           </svg>
         </span>
-        Button with Icon
+        <p>Button with Icon</p>
       </button>
       <!-- Button dropdown -->
       <div class="relative" style="margin-left: 1rem">
@@ -101,8 +116,8 @@
           </span>
           Button dropdown
         </button>
-        <div class="dropdown-list">
-          <div class="-col">
+        <div class="absolute dropdown-list">
+          <div class="flex flex-col">
             <a href="">List 1</a>
             <a href="">List 2</a>
             <a href="">List 3</a>
@@ -111,22 +126,26 @@
       </div>
     </div>
     <br />
-    <div class="container" style="margin-top: 4rem">
+    <form class="container flex flex-col" style="margin-top: 4rem">
       <!-- Input -->
-      <label class="label-input -col">
+      <label class="label-input flex flex-col" style="height: min-content">
         <span class="">Name</span>
         <input class="" placeholder="Jane Doe" />
+        <p style="color: red">Galat Nama tidak ada</p>
       </label>
 
       <!-- Input with icons -->
-      <label class="" style="margin-top: 3rem">
+      <label class="relative" style="margin-top: 3rem; width: min-content">
         <input
           type="search"
           class=""
           placeholder="Search by name..."
-          style="height: 2rem; padding: 1rem"
+          style="padding: 1rem; padding-right: 3rem"
         />
-        <div class="" style="height: 2rem; width: 2rem">
+        <div
+          class="icon-search"
+          style="height: 2rem; width: 2rem; right: 0; margin-top: 0.75rem"
+        >
           <svg
             version="1.1"
             class="h-4 text-dark"
@@ -147,6 +166,6 @@
           </svg>
         </div>
       </label>
-    </div>
+    </form>
   </body>
 </html>

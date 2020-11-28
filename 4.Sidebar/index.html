@@ -11,17 +11,29 @@
       }
       .menu-item {
         padding: 1rem 1.5rem;
+        display: flex;
+        align-items: center;
       }
       .menu-item:hover {
-        backgroundor: antiquewhite;
+        background-color: antiquewhite;
+      }
+      .navbar-sidebar {
+        position: fixed;
+        background-color: white;
+        top: 0;
+        left: 0;
+      }
+      .content-main {
+        margin-left: 15rem;
+        margin-right: 2rem;
       }
     </style>
   </head>
   <body>
     <!-- Navbar Dashboard -->
-    <main class="green" style="min-height: 100vh">
+    <main class="green" style="min-height: 150vh">
       <div class="yellow">
-        <nav class=" " style="min-height: 100vh">
+        <nav class="navbar-sidebar" style="min-height: 100vh">
           <img
             src="https://dummyimage.com/100x100/000/fff.png&text=Logo"
             alt=""
@@ -158,6 +170,15 @@
             </ul>
           </div>
         </nav>
+        <div class="flex content-main">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum hic,
+          quasi mollitia est inventore cum nemo ad ex, tenetur eligendi neque
+          deserunt distinctio in odio iusto ducimus. Quis, quaerat eum? Lorem
+          ipsum dolor, sit amet consectetur adipisicing elit. Praesentium libero
+          animi dolorum esse mollitia quia molestiae corrupti reiciendis modi
+          dignissimos cupiditate amet eum velit veniam nostrum, eius inventore
+          unde voluptas.
+        </div>
       </div>
     </main>
   </body>

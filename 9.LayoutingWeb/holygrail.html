@@ -4,12 +4,68 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Layouting</title>
+    <link rel="stylesheet" href="../style/main.css" />
+    <style>
+      @media screen and (max-width: 400px) {
+        .content {
+          flex-direction: column;
+        }
+        .sidebar {
+          width: 100%;
+        }
+        .content-center {
+          width: 100%;
+        }
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+    <script>
+      function myFunction() {
+        var element = document.getElementById("navbar-dekstop");
+        element.classList.add("hidden");
+        var element2 = document.getElementById("navbar-mobile");
+        element2.classList.remove("hidden");
+        element2.classList.add("fixed");
+      }
+    </script>
   </head>
-  <body>
-    <nav></nav>
-    <main class="content" style="padding: 50px">
-      <div class="sidebar" style="background: white; width: 40%"></div>
-      <div class="content-center" style="background: pink; padding: 10px">
+  <body class="flex flex-col" style="min-height: 100vh">
+    <nav class="yellow" style="padding: 1rem 4rem">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint impedit,
+      mollitia dolores voluptatum similique at voluptates ratione, tenetur in
+      eum corrupti expedita quae, commodi necessitatibus! Maxime, culpa
+      nesciunt? Saepe, eius.
+      <button onclick="myFunction()" style="padding: 1rem">Switch</button>
+    </nav>
+    <main class="content pink col-12 flex" style="flex: 1 0 30vh">
+      <div
+        class="sidebar-mobile white hidden"
+        id="navbar-mobile"
+        style="top: 0; bottom: 0; left: 0; height: 100vh; padding: 1rem 3rem"
+      >
+        <ul>
+          <li>Menu 1</li>
+          <li>Menu 1</li>
+          <li>Menu 1</li>
+          <li>Menu 1</li>
+          <li>Menu 1</li>
+        </ul>
+      </div>
+      <div class="sidebar col-4" style="background: white" id="navbar-dekstop">
+        <ul>
+          <li>Menu 1</li>
+          <li>Menu 1</li>
+          <li>Menu 1</li>
+          <li>Menu 1</li>
+          <li>Menu 1</li>
+          <li>Menu 1</li>
+          <li>Menu 1</li>
+          <li>Menu 1</li>
+        </ul>
+      </div>
+      <div class="content-center col-8" style="background: pink; padding: 10px">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis vero odit
         saepe voluptatem rem atque ex qui molestiae necessitatibus autem ad,
         excepturi facere enim sit culpa accusantium minus quasi eligendi? Lorem
@@ -17,7 +73,7 @@
         necessitatibus ab ipsa voluptatem, voluptates placeat sapiente eum natus
         blanditiis fuga exercitationem impedit sint aliquid saepe omnis unde
         odio tempore!
-        <div class="content__h">
+        <div class="content__h flex blue flex-col" style="padding: 2rem">
           <h1>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet
             quis voluptates quos veritatis ad praesentium, excepturi soluta
@@ -33,6 +89,11 @@
         </div>
       </div>
     </main>
-    <footer></footer>
+    <footer class="blue">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ab
+      doloribus eius esse voluptates commodi, sed iure labore corrupti?
+      Excepturi corporis totam sed fugit, tempora quo delectus tenetur possimus
+      eos.
+    </footer>
   </body>
 </html>
